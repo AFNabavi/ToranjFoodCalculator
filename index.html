@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماشین حساب ترنج فود</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>ماشین حساب ترنج فود</h1>
+    </div>
+
+    <div class="add-item">
+        <button onclick="addItem()">+</button>
+    </div><br>
+
+    <div id="items">
+        <div class="item">
+            <span class="item-name"><input type="text" placeholder="نام محصول" id="item-name1"></span>
+            <span class="item-price">قیمت<input type="number" id="item-price1"></span>
+            <span class="item-weight">وزن<input type="number" id="item-weight1"></span>
+        </div>
+    </div><br>
+
+    <div class="calculate-btn">
+        <button class="show-result" onclick="showResult()">محاسبه</button>
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 let itemCount = 1;
 
+// click on add-item button html tag 
 function addItem() {
     const nameSpan = document.createElement("span");
     nameSpan.id = "item-name";
@@ -32,6 +33,7 @@ function addItem() {
     itemCount++;
 }
 
+// click on show-result button html tag 
 function showResult() {
     const resultDoc = document.getElementById("result");
     if (result) {
@@ -78,6 +80,18 @@ function showResult() {
         }
     });
     document.getElementById("result").appendChild(copyButton);
+}
 
-    // TODO: add total price;
+// install offline app
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .catch((error) => {
+                console.error(
+                    "ثبت Service Worker ناموفق بود:",
+                    error
+                );
+            });
+    });
 }
